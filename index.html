@@ -1,70 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Peter Pociask</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pociask Industries</title>
+    <style>
+      body {
+        background-image: linear-gradient(
+            to bottom right,
+            rgba(255, 255, 255, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          url("images/logo.svg");
+        background-size: cover, 800px; /* First for gradient, second for SVG */
+        background-color: #2e3639; /* Background color shown while the image is loading */
+        background-position: center center, center center; /* Centers both the gradient and the background image */
+        background-repeat: no-repeat, no-repeat; /* Applies to each background layer */
+        margin: 0;
+        font-family: sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Viewport Height */
+      }
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+      .content {
+        text-align: center;
+        color: white;
+      }
 
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
-    <!-- Custom styles for this template -->
-    <link href="./css/cover.css" rel="stylesheet">
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+      .heading {
+        font-size: 3em;
+        margin-top: 200px;
+      }
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+      .subheading {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+      }
+    </style>
   </head>
   <body>
-    <div class="site-wrapper">
-
-      <div class="site-wrapper-inner">
-
-        <div class="cover-container">
-
-          <div class="masthead clearfix">
-            <div class="inner">
-              <h3 class="masthead-brand"></h3>
-              <ul class="nav masthead-nav"  id="nav">
-                <li><a href="resume.docx">Resume</a></li>
-                <li><a href="https://www.flickr.com/photos/peter_p/sets">Projects</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="inner cover">
-            <h1 class="cover-heading">PETER POCIASK</h1>
-            <!--I realize it is ostentatious and I do not care-->
-            <p class="lead"></p>
-          </div>
-
-          <div class="mastfoot">
-            <div class="inner">
-   
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-    $( document ).ready(function() {
-        $( "#nav" ).fadeIn( 3000, function() {
-        // Animation complete
-        });
-      });
-    </script>
+    <div class="content"></div>
   </body>
 </html>
