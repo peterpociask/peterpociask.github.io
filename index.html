@@ -6,41 +6,44 @@
     <title>Pociask Industries</title>
     <style>
       body {
-        background-image: linear-gradient(
-            to bottom right,
-            rgba(255, 255, 255, 0.5),
-            rgba(0, 0, 0, 0.5)
-          ),
-          url("images/logo.svg");
-        background-size: cover, 800px; /* First for gradient, second for SVG */
-        background-color: #2e3639; /* Background color shown while the image is loading */
-        background-position: center center, center center; /* Centers both the gradient and the background image */
-        background-repeat: no-repeat, no-repeat; /* Applies to each background layer */
         margin: 0;
+        background-color: black;
         font-family: sans-serif;
+        display: flex; /* Center content vertically */
+        justify-content: center; /* Center content horizontally */
+        align-items: center; /* Center content both ways */
+        min-height: 100vh; /* Set minimum height for viewport */
+      }
+
+      logo{
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh; /* Viewport Height */
+        background-color: white;
       }
 
-      .content {
-        text-align: center;
-        color: white;
+      img {
+        width: 100%; /* Make image responsive */
+        max-width: 500px; /* Maximum width */
+        background-color: #FFFFFF;
       }
-
-      .heading {
-        font-size: 3em;
-        margin-top: 200px;
+      /* For tablets */
+      @media (max-width: 768px) {
+        img {
+          max-width: 350px; /* Smaller size for tablets */
+        }
       }
-
-      .subheading {
-        font-size: 1.5em;
-        margin-bottom: 20px;
+      /* For mobile phones */
+      @media (max-width: 480px) {
+        img {
+          max-width: 250px; /* Even smaller size for phones */
+        }
       }
     </style>
   </head>
   <body>
-    <div class="content"></div>
+    <div id="logo">
+      <img src="./images/Logo.svg" alt="Logo" width="500" />
+    </div>
   </body>
 </html>
