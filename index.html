@@ -35,14 +35,20 @@
         background-color: #000000;
       }
       #logo {
+        padding: 0;
+        margin: 0;
         display: flex;
         justify-content: center;
         align-items: center;
+        background-color: #000000; /* Match the background color of the page */
       }
       img {
         width: 100%;
         max-width: 500px;
         background-color: #ffffff;
+        border: none; /* Remove any border */
+        padding: 0;
+        margin: 0;
       }
       @media (min-width: 481px) and (max-width: 768px) {
         img {
@@ -52,6 +58,9 @@
       @media (max-width: 480px) {
         img {
           max-width: 250px;
+        }
+        #logo img {
+          width: 100%;
         }
       }
 
@@ -123,13 +132,20 @@
           <li class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle">Services</a>
             <ul class="dropdown-menu">
-              <li><a href="#" class="dropdown-item">Implementation Consulting</a></li>
+              <li>
+                <a href="#" class="dropdown-item">Implementation Consulting</a>
+              </li>
               <li><a href="#" class="dropdown-item">Troubleshooting</a></li>
               <li><a href="#" class="dropdown-item">Concept Development</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a href="mailto:contact@pociask.com" target="_blank" class="nav-link">Contact</a>
+            <a
+              href="mailto:contact@pociask.com"
+              target="_blank"
+              class="nav-link"
+              >Contact</a
+            >
           </li>
         </ul>
       </nav>
@@ -141,20 +157,21 @@
     </main>
     <footer>Copyright 2024</footer>
     <script>
-      document.addEventListener('click', function (e) {
-        var dropdowns = document.querySelectorAll('.dropdown-menu');
+      document.addEventListener("click", function (e) {
+        var dropdowns = document.querySelectorAll(".dropdown-menu");
         dropdowns.forEach(function (dropdown) {
           if (!dropdown.parentElement.contains(e.target)) {
-            dropdown.style.display = 'none';
+            dropdown.style.display = "none";
           }
         });
       });
-    
-      document.querySelectorAll('.dropdown-toggle').forEach(function (toggle) {
-        toggle.addEventListener('click', function (e) {
+
+      document.querySelectorAll(".dropdown-toggle").forEach(function (toggle) {
+        toggle.addEventListener("click", function (e) {
           e.preventDefault();
           var dropdown = this.nextElementSibling;
-          dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+          dropdown.style.display =
+            dropdown.style.display === "block" ? "none" : "block";
         });
       });
     </script>
